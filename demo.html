@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>炫酷登录按钮</title>
+	<link rel="stylesheet" type="text/css" href="./demo.css">
+	<script type="text/javascript" src="./jquery.js"></script>
+</head>
+<body>
+  <button class="login">
+  	<p>LOGIN</p>
+  	<div class="loading">
+  		<div></div>
+  		<div></div>
+  		<div></div>
+  	</div>
+
+
+  	<svg class="checkmark" width='30px' height='30px' stroke='white' fill='none'>
+  		 <polyline points='2,10 12,18 28,2'></polyline>
+  		
+
+  	</svg>
+  </button>
+	
+
+	<script type="text/javascript">
+	$($('.login').click(
+			function(){
+				$(this).toggleClass('active');
+				setTimeout(
+					()=>{
+						$(this).toggleClass('verity');
+					}, 3000)
+			}
+		))
+
+	</script>
+</body>
+</html>
